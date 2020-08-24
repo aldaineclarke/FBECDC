@@ -1,0 +1,14 @@
+<%-include("_adminHeader");%>
+<!-- Content Area -->
+    <div class="container-fluid">
+        <h1>Name of the student is <%=students[0].firstName%> </h1>
+        <span><%=students.firstName%></span>
+        <% students.forEach((student)=>{%>
+            <span><%=student.firstName%></span>
+        <% }) %>
+    </div>
+
+<!--End Content Area -->
+
+    
+<%-include("_adminFooter");%>
