@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 const { response } = require("express");
-const FBECDC_code = process.env.MDBpass;
-const URI = `mongodb+srv://SlyMamba:${FBECDC_code}@fbecdc.1xfyc.mongodb.net/FBECDC?retryWrites=true&w=majority`;
+const URI = process.env.URI
 const connectDB = async ()=>{
     try{
-        await mongoose.connect(URI, { 
+        await mongoose.connect(process.envURI, { 
             useNewUrlParser: true , 
             useUnifiedTopology: true,
             useCreateIndex:true } 

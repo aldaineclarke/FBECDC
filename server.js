@@ -12,7 +12,6 @@ const port = process.env.PORT || 5000;
 const app = express();
 const staticDirectory = express.static(staticPath);
 const connectDB = require("./connection");
-const { request } = require("express");
 const adminRoute = require("./controlers/admin");
 const methodOveride = require("method-override");
 connectDB();
@@ -107,8 +106,10 @@ app.listen(port);
 console.log("listening on port ", port);
 
 const mailgun = require("mailgun-js");
-const DOMAIN = 'sandboxc49b98ad2a1d4276970efdb19ef2971f.mailgun.org';
-const mg = mailgun({apiKey: "f861f14c2adda4dcaed75870af7b1d1a-203ef6d0-b80b82ee" , domain: DOMAIN});
+const DOMAIN = process.env.MAILGUNDOMAIN;
+const MAILGUNAPI = process.env.MAILGUNAPI;
+
+const mg = mailgun({apiKey: MAILGUNAPI , domain: DOMAIN});
 // const data = {
 // 	from: 'Test <aldaineclarke1@gmail.com>',
 // 	to: 'firstbornecdc@gmail.com',
