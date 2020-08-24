@@ -3,7 +3,7 @@ const { response } = require("express");
 const URI = process.env.URI
 const connectDB = async ()=>{
     try{
-        await mongoose.connect(process.envURI, { 
+        await mongoose.connect(URI, { 
             useNewUrlParser: true , 
             useUnifiedTopology: true,
             useCreateIndex:true } 
