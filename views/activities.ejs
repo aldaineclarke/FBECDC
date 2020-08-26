@@ -1,68 +1,142 @@
 <%-include("_header");%>
     
-    <main class="container">
+    <main onload="consoleTest()" class="container" >
         <div id='calendar'></div>
 
         <div>
             <h6 >Events</h6>
             <% events.forEach((event)=>{%>
-                <div id="events">
+                <div class="events">
                     <p class="title" data-title = "<%= event.title %>">Title: <%= event.title %></p>
-                    <p class="start" data-start = "<%= event.start %>">Start: <%= event.start.toLocaleDateString() %></p>
-                    <p class="end" data-end = "<%= event.start %>">End: <%= event.end.toLocaleDateString() %></p>
+                    <p class="start" data-start = "<%= event.start.toISOString() %>">Start: <%= event.start.toLocaleDateString() %></p>
+                    <p class="end" data-end = "<%= event.end.toISOString() %>">End: <%= event.end.toLocaleDateString() %></p>
                 <%              }); %>
                 </div>
                 
         </div>
     </main>
-
-
-
-<footer>
-    <div class="footer-grid">
-        <div>
-            <h5>Get to Know Us</h5>
-            <ul>
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div id="info">
-            <h5>School Info</h5>
-            <ul>
-                <li><a href="/handbook">Student Handbook</a></li>
-                <li><a href="/register">Registration</a></li>
-                
-            </ul>
-        </div>
-        <div class>
-            <h5>Contact Us</h5>
-            <ul>
-                <li>
-                    <address>
-                        Twickenham Park,
-                        New Nursery,
-                        Spanish Town,
-                        St. Catherine.
-                        Tel(876)790-5361
-                    </address>
-                    <a href="/contact-us">Contact Us <span><svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-envelope ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                        </svg></span></a>
-                </li>
-            
-        </div>
-    </div>
-
-        <p class="text-small">
-            &copy; Copyright 2020 of the First&nbsp;Born&nbsp;ECDC.
-        </p>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h6>Get to Know Us</h6>
+                <ul>
+                    <li>
+                        <a href="/privacy-policy">
+                            <span>
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/terms">
+                            <span>
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                            Terms of Service
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="info">
+                <h6>School Info</h6>
+                <ul>
+                    <li>
+                        <a href="/handbook">
+                            <span>
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                            Student Handbook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/register">
+                            <span>
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                            Registration
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h6>Contact Us</h6>
+                <ul>
+                    <li>
+                        <a href="/contact-us">
+                            <span>
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                                Contact Us <i class=" ml-1 far fa-envelope"></i>
+                        </a>
+                        <div class="mt-1">
+                            <address>
+                                Twickenham Park,
+                                New Nursery,<br>
+                                Spanish Town,
+                                St. Catherine.<br>
+                                Tel(876)790-5361
+                            </address>
+                        </div>  
+                    </li>
+                </ul>  
+            </div>
+            <div>
+                <h6>Other Links</h6>
+                <ul>
+                    <li>
+                        <a href="/admin">
+                            <span>
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                                Admin Page
+                        </a>
     
-</footer>
-<%- include("_scripts");%>
-<script>
-    let titles = document.getElementsByClassName("title");
-    console.log(titles);
+                    </li>
+                    <li>
+                        <div>
+                            <a href="www.facebook.com"><i class="fab fa-facebook fa-2x mt-1"></i><span class="ml-1">Social Links</span> </a>
+                        </div>
+                        
+                    </li>
+                </ul>
+                
+               
+                
+                
+            </div>
+    
+        </div>
+        <div class="copyright">
+            <p>
+                &copy; Copyright <span id="year"></span> of the First&nbsp;Born&nbsp;ECDC. All Rights Reserved
+            </p>
+        </div>
+    
+        
+    </footer>
+    <script>
+        let currentYear = new Date();
+        let year = document.querySelector("#year");
+        year.innerHTML = currentYear.getFullYear();
+        
+        let events = []
+        let titles = document.getElementsByClassName("title");
+        let startDates = document.getElementsByClassName("start");
+        let endDates = document.getElementsByClassName("end");
+        console.log(titles);
+        for(i=0;i<titles.length;i++){
+            let titleData = titles[i].dataset.title;
+            let startData = startDates[i].dataset.start;
+            let endData = endDates[i].dataset.end;
+            events.push({title:titleData,start:startData,end:endData,});
+            console.log(events);
+
+        }
+
+
+
     
     // allEvents.forEach((event)=>{
     //     console.log("title = ", event["data-title"]);
@@ -76,14 +150,18 @@
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'},
+        events:events,
             
         
     });
 
     calendar.render();
 
-    })
-</script>
+    });
 
-</body>
-</html>
+    </script>
+    <%- include("_scripts");%>
+    
+    </body>
+    </html>
+ 

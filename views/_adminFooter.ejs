@@ -8,7 +8,7 @@
 <footer class="sticky-footer bg-white">
 <div class="container my-auto">
 <div class="copyright text-center my-auto">
-    <span>Copyright &copy; FirstBorn&nbsp;ECDC 2020</span>
+    <span>Copyright &copy; FirstBorn&nbsp;ECDC <span id="year"></span></span>
 </div>
 </div>
 </footer>
@@ -19,6 +19,13 @@
 
 
 </body>
+
+<script>
+    let currentYear = new Date();
+    let year = document.querySelector("#year");
+    year.innerHTML = currentYear.getFullYear();
+
+</script>
 
 <%-include("_scripts.ejs")%>
 <!-- Core plugin JavaScript-->

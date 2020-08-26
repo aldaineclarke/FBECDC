@@ -38,6 +38,12 @@ app.get('/', (req,res)=>{
 app.get('/register', (req,res)=>{
     res.render('register');
 });
+app.get('/handbook', (req, res)=>{
+    res.render("handbook");
+});
+app.get('/registration-form',(req, res)=>{
+    res.render("registration-form");
+})
 app.get('/contact-us', (req,res)=>{
     res.render('contact-us');
 });
@@ -54,7 +60,10 @@ app.get('/activities', async(req,res)=>{
 });
 app.get('/terms',(req,res)=>{
     res.render("termsAndConditions");
-})
+});
+app.get("/privacy-policy",(req,res)=>{
+    res.render("privacy-policy");
+});
 app.post('/contact-us', (req,res)=>{
     let name = req.body.name;
     let sender = req.body.email;
@@ -64,7 +73,7 @@ app.post('/contact-us', (req,res)=>{
     res.redirect('/');
 
 });
-app.post('/register', async (req,res)=>{
+app.post('/registration-form', async (req,res)=>{
     console.log(req.body);
     const student = new Student({
        firstName : req.body.firstName,
@@ -96,6 +105,7 @@ app.post('/register', async (req,res)=>{
         await student.save();
     }catch(e){
         console.log(e);
+        res.redirect("/");
 
     }
     res.redirect("/");

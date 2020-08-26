@@ -15,3 +15,6 @@ function checkAddress(){
         otherAddress.style.display = "block";
     }
 }
+function consoleTest(){
+    console.log("Testing the onload function");
+}
