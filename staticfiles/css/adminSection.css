@@ -14,6 +14,36 @@
  .sidebar-logo > img{
     vertical-align: middle;
 }
+.student-info{
+    position:relative;
+    overflow:hidden;
+    display:none;
+    opacity:0;
+    transition: all 500ms linear;
+}
+.student-info ul{
+    list-style:none;
+    padding:5px;
+    
+}
+.student-info.active{
+    display:block;
+    animation-name:fade;
+    animation-fill-mode:forwards;
+    animation-duration: 1500ms;
+
+}
+
+@keyframes fade{
+    from{top:-50px;opacity:0}
+ 
+    to{
+        top:0px; 
+        opacity:1}
+}
+
+
+
 .sidebar-logo > img{
     object-fit: contain;
     height:2rem;

@@ -3,7 +3,6 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin-2/blob/master/LICENSE)
  */
-
 !function(s){
     "use strict";
     
@@ -25,9 +24,6 @@
                 var o = e.originalEvent, l= o.wheelDelta || -o.detail;
                 this.scrollTop+=30*(l<0?1:-1);
                 e.preventDefault()}});
-    s(document).on("scroll",function(){
-        100<s(this).scrollTop() ? /*True */ s(".scroll-to-top").fadeIn():/*false */s(".scroll-to-top").fadeOut()
-    });
     s(document).on("click","a.scroll-to-top",function(e){
         var o=s(this);
         s("html, body").stop().animate({scrollTop:s(o.attr("href")).offset().top},1e3,"easeInOutExpo"),e.preventDefault()
@@ -38,9 +34,7 @@
 
 function findActiveHeader(){
         let head = document.getElementById("head");
-        console.log(head);
         let pageHeader = head.dataset.head;
-        console.log(pageHeader);
         let listItems = document.querySelectorAll(".sidebar > .nav-item");
         listItems.forEach((listItem)=>{
             let innerhtml = listItem.innerText;
@@ -49,10 +43,23 @@ function findActiveHeader(){
             }else if(innerhtml == pageHeader){
                 if(!listItem.classList.contains("active")){
                     listItem.classList.add("active");
-                    console.log(listItem.classList);
             }
-            console.log(innerhtml);
          } 
         });
-        console.log(listItems);
     }
+
+function slideToggle() {
+    
+
+let students = document.querySelectorAll("student-toggle");
+students.forEach((student)=>{
+    student.addEventListener("click",(event)=>{
+        student.animate({opacity:0});
+        student.classList.toggle("active");
+        student.animate({opacity:1});
+    });
+
+    });
+
+}
+

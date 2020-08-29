@@ -2,37 +2,39 @@
 
 <main class="container">
     <section class="row justify-content-center">
-        <h2 class="mt-5 mb-3">Contact Us</h2>
+        <h2 class="mt-5 mb-3"><strong>Contact Us</strong> </h2>
     </section>
-    <section>
-        <form  action="" method="POST">
-            <div class="form-row">
-                <div class="col">
-                    <label for="name">Name:</label>
-                <input class="form-control" type="text" id="name" name="name">
-                </div>
-                <div class="col">
-                    <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email" name="email">
-                </div>
-                <div class="col">
-                    <label for="telephone">Telephone:</label>
-                    <input class="form-control" type="tel" id="telephone" name="tel">
-                </div>
-            
+    <div class="watermark">
+        <section>
+            <form  action="" method="POST">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="name">Name:</label>
+                    <input class="form-control" type="text" id="name" name="name">
+                    </div>
+                    <div class="col">
+                        <label for="email">Email:</label>
+                        <input class="form-control" type="email" id="email" name="email">
+                    </div>
+                    <div class="col">
+                        <label for="telephone">Telephone:</label>
+                        <input class="form-control" type="tel" id="telephone" name="tel">
+                    </div>
                 
-            </div>
-            <div class="form-row">
-                <label for="contactMessage">Message:</label>
-                <textarea class="form-control" name="message" id="contactMessage" cols="30" rows="10" placeholder="Enter a Message"></textarea>
-            </div>
-            <div class="form-row justify-content-center mt-4 mb-3">
-                <input class="btn btn-warning" type="submit" value="SendMessage">
-            </div>
+                    
+                </div>
+                <div class="form-row">
+                    <label for="contactMessage">Message:</label>
+                    <textarea class="form-control" name="message" id="contactMessage" cols="30" rows="10" placeholder="Enter a Message"></textarea>
+                </div>
+                <div class="form-row justify-content-center mt-4 mb-3">
+                    <input class="btn btn-warning" type="submit" value="SendMessage">
+                </div>
+                
             
-        
-        </form>
-        
-    </section>
+            </form>
+            
+        </section>
+    </div>
 </main>
 <%- include("_footer");%>

@@ -105,10 +105,10 @@ app.post('/registration-form', async (req,res)=>{
         await student.save();
     }catch(e){
         console.log(e);
-        res.redirect("/");
+        res.redirect("/admin/add-student");
 
     }
-    res.redirect("/");
+    res.redirect("/admin/students");
 });
 
 

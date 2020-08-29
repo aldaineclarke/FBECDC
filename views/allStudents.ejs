@@ -1,13 +1,45 @@
 <%-include("_adminHeader");%>
 <!-- Content Area -->
-    <div class="container-fluid">
-        <h1>Name of the student is <%=students[0].firstName%> </h1>
-        <span><%=students.firstName%></span>
-        <% students.forEach((student)=>{%>
-            <span><%=student.firstName%></span>
-        <% }) %>
-    </div>
+    <main class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1>All Students</h1>
+            <a href="/admin/add-student" class="btn btn-info btn-sm"><i class="far fa fa-plus"></i> Add Student</a>
+        </div>
+        <div class="row mt-2">
+             
+            <section class="col-md-6">
+                <ul>
+                    <% students.forEach((student)=>{%>
+                    <li class="student-toggle "><a href="#"><%=student.firstName%> <%=student.lastName%></a>
+                        <div class="student-info">
+                            <ul>
+                                <li><strong>Full Name: </strong><%=student.firstName%> <%=student.middleName%> <%=student.lastName%></li>
+                                <li><strong>Address: </strong><%=student.childAddress%></li>
+                                <li><strong>Date of Birth:</strong> <%=student.dateOfBirth.toLocaleDateString()%></li>
+                                <li><strong>Gender: </strong> <%=student.gender%></li>
+                                <li><strong>Parent/Guardian: </strong> <%=student.parentOrGuardian%></li>
+                                <li><strong>Email: </strong> <%=student.parentOrGuardianEmail%></li>
+                            </ul>
+                            <div class="row justify-content-end crud">
+                                <a href="admin/students/edit-student" class="btn btn-sm btn-info mr-2">Edit</a>
+                                <form action="admin/students/<%=student.id%>?_method=DELETE" method="POST">
+                                    <button class="btn btn-danger btn-sm ml-auto">Delete</button>
+                                </form>
+                            </div>
+                        </div>
 
+
+                    </li>
+                    <% }) %>
+                </ul>
+                
+            </section>
+            
+        </div>
+
+        
+    </main>
+    
 <!--End Content Area -->
 
     

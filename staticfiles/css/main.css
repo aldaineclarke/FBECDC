@@ -1,4 +1,11 @@
 
+/*
+    =============
+    Global Styles
+    =============
+
+*/
+
 *{
     box-sizing: border-box;
 }
@@ -15,45 +22,30 @@ main{
     position: relative;
     min-height:80vh;
 }
-footer{
-    min-height: 10vh;
-}
 p{
     margin:0;
 }
 
 footer{
- 
+    min-height: 10vh;
     position: relative;
     line-height:12px;
     margin-top:20px;
     text-align:center;
     background-color: #C7AFBD;
 }
-.col-flex{
-    display:flex;
-    padding: 5px;
-    flex-basis: 27%;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 100vw;
 
-}
-.col-flex div{
-    text-align: center;
-    width: 20em;;
-}
-.col-flex div h3{
-    font-style: italic;
-}
+/* 
+    ============
+     Components
+    ============
+*/
 .school-tag{
     color: goldenrod;
 }
 
 #img-brand{
-
     height:100px;
-
 }
 
 nav ul li:hover{
@@ -65,36 +57,28 @@ nav ul li a{
     text-decoration: none;
     
 }
-.slider-box{
-    border: 1px solid yellow;
-    margin: 10px 0;
-    display:flex;
-    width:100%;
-    justify-content: center;
+
+.btn-trans{
+    padding:5px;
+    background-color:Transparent;
+    border:1px solid goldenrod;
+    color: white;
+    transition: 500ms background-color ease-in;
+
 }
-.slider-img{
-    display: block;
-    object-fit: fill;
-    height: 25em;
-    width: 100vw;
+.btn-trans:hover{
+    text-decoration:none;
+    color: white;
+    background-color: goldenrod;
 }
-.featured{
-    display: block;
-}
+/* 
+    ==========
+    Utilities
+    ==========
+ */
 .text-small{
     font-size: small;
     padding: 5px 0;
-}
-.sidebar-logo > img{
-    vertical-align: middle;
-    
-    
-
-}
-.sidebar-logo > img{
-    object-fit: contain;
-    height:2rem;
-    width:2rem;
 }
 .bg-purple{
     background-color: blueviolet;
@@ -103,6 +87,12 @@ nav ul li a{
     background-color: rgba(196, 155, 23, 0.925); 
 
 }
+.flex{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
 .flexbox-wrap{
     display: flex;
     position:relative;
@@ -118,9 +108,42 @@ nav ul li a{
     position:relative;
     justify-content:center;
     align-items: center;
-    text-align: center;
-    
+    text-align: center;  
 }
+
+.li-spacing li{
+    margin-bottom: 10px;
+ }
+ .li-spacing li h6{
+     font-weight: bold;
+ }
+ .border-faded{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+div.watermark::after{
+    content: "";
+    opacity:0.2;
+    top:40px;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:-1;
+    position:absolute;
+    background-image: url("/images/FBECDC_Trans_crest.png");
+    background-repeat: repeat-y;
+    background-position: top;
+    background-size: contain;
+    min-height:80vh;
+    width:100%;
+}
+
+/* 
+    =======
+    Layout
+    =======
+*/
+
 .grid-container{
     margin: 10px 0;
     display: grid;
@@ -130,17 +153,10 @@ nav ul li a{
     justify-content: center;
 
 }
-
-.li-spacing li{
-   margin-bottom: 10px;
+#myContainer{
+    max-width: 1400px;
+    margin:0 auto;
 }
-.li-spacing li h6{
-    font-weight: bold;
-}
-#calendar {
-    max-width: 1100px;
-    margin: 40px auto;
-  }
 .footer-grid{
     display:grid;
     text-align: left;
@@ -148,10 +164,7 @@ nav ul li a{
     grid-gap: 1rem;
     align-items: center;
     line-height:16px;
-
-
 }
-
 .footer-grid>div{
     padding: 10px;
     display: flex;
@@ -167,17 +180,34 @@ nav ul li a{
     margin:0;
     padding:0;
     font-size: smaller;
-
 }
 .footer-grid a{
     text-decoration:none;
     border: none;
     color:inherit;
-
 }
 .footer-grid a:hover{
     color:white !important;
 }
+
+
+/* 
+    ========
+    Content
+    ========
+*/
+.sidebar-logo > img{
+    vertical-align: middle;
+}
+.sidebar-logo > img{
+    object-fit: contain;
+    height:2rem;
+    width:2rem;
+}
+#calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+  }
 .social, .social a{
     color:rgb(82, 75, 75)!important;
     justify-content: flex-end;
@@ -189,11 +219,6 @@ nav ul li a{
     padding:10px 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-}
-
-#myContainer{
-    max-width: 1400px;
-    margin:0 auto;
 }
 .animated-image{
     border-radius:20px;
@@ -207,8 +232,6 @@ nav ul li a{
     animation-duration: 5000ms;
     transition: opacity ease-in;
     transition-delay: 1500ms;
-    
-
 }
 #animation-content{
     margin:20px 0px;
@@ -233,7 +256,6 @@ nav ul li a{
     background-color: rgba(0,0,0,0.7);
     overflow: hidden;
     transition: 500ms ease-in-out;
-    ;
 
 }
 .section-b{
@@ -254,45 +276,9 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     text-align:center;
-
 }
 .section-b-inner h3{
     font-size: 4vw;
-}
-
-
-.btn-trans{
-    padding:5px;
-    background-color:Transparent;
-    border:1px solid goldenrod;
-    color: white;
-    transition: 500ms background-color ease-in;
-
-}
-.btn-trans:hover{
-    text-decoration:none;
-    color: white;
-    background-color: goldenrod;
-}
-.border-faded{
-    background: rgba(0, 0, 0, 0.7);
-}
-
-div.watermark::after{
-    content: "";
-    opacity:0.2;
-    top:40px;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:-1;
-    position:absolute;
-    background-image: url("/images/FBECDC_Trans_crest.png");
-    background-repeat: repeat-y;
-    background-position: top;
-    background-size: contain;
-    min-height:80vh;
-    width:100%;
 }
 .copyright{
     height: 50px;
@@ -305,10 +291,6 @@ div.watermark::after{
     justify-content: center;
 }
 
-.eventView > *{
-    color:green;
-    padding-left:10px;
-}
 @keyframes slide-in{
   from {left:-2000px};
   to {left:0px;}
@@ -318,14 +300,23 @@ div.watermark::after{
     to{opacity:1}
 }
 
-.flex{
-    display:flex;
-    justify-content: center;
-    margin-bottom: 5px;
-}
+/* 
+    =============
+    Media Queries
+    =============
+ */
+
 @media(max-width:480px){
     *{
         font-size: small;
+    }
+    nav ul li:hover{
+        border: none;
+        background-color:goldenrod;
+    }
+    nav ul li a:hover{
+        color:blueviolet !important;
+
     }
     .school-tag{
         font-weight: bold;

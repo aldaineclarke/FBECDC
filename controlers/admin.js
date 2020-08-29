@@ -97,11 +97,54 @@ adminRoute.put("/event/edit/:id", async (req, res, next)=>{
     next();
 },saveEventAndRedirect("event/edit"));
 
+adminRoute.get("/add-student",checkAuthenticated, (req,res)=>{
+    res.render("add-student",{admin:req.user, page:" View Events"});
+});
+adminRoute.post("/add-student", checkAuthenticated, async (req,res)=>{
+    console.log(req.body);
+    const student = new Student({
+       firstName : req.body.firstName,
+       lastName:req.body.lastName,
+       middleNAme:req.body.middleName,
+       dateOfBirth: req.body.DOB,
+       gender:req.body.gender,
+       childAddress:req.body.addrLine1+",\n"+req.body.addrLine2+",\n"+ req.body.city+",\n"+req.body.parish,
+       parentOrGuardian:req.body.guardianName,
+       parentOrGuardianEmail: req.body.guardianEmail,
+       parentOrGuardianAddress:req.body.guardianAddressLine1+",\n"+req.body.guardianAddressLine2+",\n"+ req.body.guardianAddressCity+",\n"+req.body.guardianAddressParish,
+       parentOrGuardianTel:req.body.guardianTel1,
+       parentOrGuardianTel2:req.body.guardianTel2,
+       physician:req.body.physician,
+       physicianAddress: req.body.physicianAddress,
+       physicianOffice:req.body.physicianOffice,
+       physicianTel: req.body.physicianTel,
+       alergies:req.body.alergies,
+       contact1: req.body.contact1Name,
+       contact1Relation: req.body.contact1Relationship,
+       contact1Address:req.body.contact1Address,
+       contact1Tel: req.body.contact1Tel,
+       contact2: req.body.contact2Name,
+       contact2Relation: req.body.contact2Relationship,
+       contact2Address:req.body.contact2Address,
+       contact2Tel: req.body.contact2Tel,
+    });
+    try{
+        await student.save();
+    }catch(e){
+        console.log(e);
+        res.redirect("/");
+
+    }
+    res.redirect("/");
+});
+
+
 adminRoute.post("/addEvent", (req, res, next)=>{
     req.event = new CalendarEvent;
     next()
     
 },saveEventAndRedirect("addEvent"));
+
 adminRoute.delete("/logout", (req, res)=>{
     req.logOut();
     res.redirect("/admin/login");
@@ -136,5 +179,13 @@ function saveEventAndRedirect(path){
 
  }
 }
+// function CheckLogin(req,res){
+//     if (req.isAuthenticated()){
+//         res.redirect("/admin")
+
+//     }else{
+//         res.redirect("/admin/login")}
+
+// }
 
 module.exports = adminRoute;
