@@ -1,56 +1,63 @@
 <%- include("_header");%>
-<main id="myContainer">
+<main class="container-fluid" id="myContainer">
+
   <section>
-    <div class="flexbox bg-goldenrod">
+    <div class="flexbox hero">
       <div id="animation-content">
-      <h3>Welcome to the</h3> <h2>First Born Early Childhood Development Centre</h2>
-      <p>With the announcement of COVID-19, and the challenges it bring, we have decided to implement a website to aid with registration and other school related processes.</p>
+        <h3>Welcome to the</h3>
+        <h2>First Born Early Childhood Development Centre</h2>
+        <p><i class="fas fa-info-circle"></i>With the announcement of COVID-19, and the challenges it bring, we have
+          decided
+          to
+          implement a website to aid
+          with registration and other school related processes.</p>
+      </div>
     </div>
+  </section>
+  <section class="section-b">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/IMG-20190909-WA0003.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/IMG-20190909-WA0002.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/IMG-20190909-WA0006.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/IMG-20190909-WA0010.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+
+    </div>
+    <div class="overlay">
+      <div class="section-b-inner">
+        <h3>Come and be apart of our Family</h3>
+        <a href="/register" class="btn-trans">Register</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="m-3">
+    <div class="grid-container">
+      <div class="responsive-text">
+        <h4><i>We help your child grow step by step, block by block</i></h4>
+      </div>
+      <div class="flexbox">
+        <img class="fade-in animated-image" src="/images/sincerely.jpg" alt="">
+      </div>
     </div>
   </section>
 
-
-  <section class="m-3">
-      <div class="grid-container">
-        <div class="responsive-text">
-          <h4><i>We help your child grow step by step, block by block</i></h4>
-        </div>
-        <div class="flexbox">
-          <img class="fade-in animated-image" src="/images/sincerely.jpg" alt="">
-        </div>
-      </div>
-  </section> 
-  <section class="section-b">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/images/IMG-20190909-WA0003.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/IMG-20190909-WA0002.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/IMG-20190909-WA0006.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/IMG-20190909-WA0010.jpg" class="d-block w-100" alt="...">
-              </div>
-          </div>
-          
-      </div>
-      <div class="overlay">
-        <div class="section-b-inner">
-          <h3>Come and be apart of our Family</h3>
-          <a href="/register" class="btn-trans">Register</a>
-        </div>
-          
-      </div>
-
-  </section> 
 </main>
-    
-   
-    <%- include("_footer");%>
+
+
+<%- include("_footer");%>
 
 </body>
+
 </html>
