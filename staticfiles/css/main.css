@@ -212,6 +212,27 @@ footer {
 .circle-photo h4 {
   margin: 5px 0;
 }
+.board__member {
+  margin: 4rem 0;
+}
+.board__member img {
+  margin-right: 20px;
+  float: left;
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.board__member img::after {
+  clear: left;
+  content: "";
+}
+.member__info h3,
+.member__info p {
+  margin: 3px 0;
+  font-weight: bold;
+}
 
 /* 
     ============
@@ -264,6 +285,10 @@ section[class^="divider-"] img {
     Utilities
     ==========
  */
+.float-right {
+  float: right;
+  margin: 0 1rem;
+}
 .right {
   margin-left: auto;
 }
@@ -288,7 +313,15 @@ section[class^="divider-"] img {
   justify-content: center;
   margin-bottom: 5px;
 }
-
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.spacing-2 {
+  line-height: 2em;
+}
 .flexbox-wrap {
   display: flex;
   position: relative;
@@ -512,6 +545,13 @@ div.watermark::after {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.img-400 {
+  height: 350px;
+  width: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* 
