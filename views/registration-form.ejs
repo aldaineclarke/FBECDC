@@ -2,211 +2,258 @@
 <%- include("_header")%>
 <main class="container">
 
-    <section class="mt-3">
-        <h2>School Registration Form</h2>
-        <p>Please fill out the form in its entirety and ensure that all the information is correct. Also remember to drop off all required documents by the date of registration. </p>
-    </section>
-    <form method="POST" name="childInfo" class="mt-2">
-        <div class="form-row" >
-            <h5 class="ml-2"><strong>Child's information</strong></h5>
+    <section>
+        <div class="content">
+          <h1 class="text-center">School Registration Form</h1>
+          <p>Please fill out the form in its entirety and ensure that all the information is correct. Also remember to drop off all required documents by the date of registration. </p>
         </div>
-        <!-- Childs Information  -->
-        <fieldset name="childInfo">
-            <div class="form-row" >
-                <div class="col">
-                  <input id="fname" type="text" class="form-control" placeholder="First name" name="firstName" required>
-                  <label for="fname" class="mt-1 ml-1">First Name</label>
-                </div>
-                <div class="col">
-                  <input id="fname" type="text" class="form-control" placeholder="Last name" name="lastName">
-                  <label for="lname" class="mt-1 ml-1">Last Name</label>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-6">
-                  <input id="mname" type="text" class="form-control" placeholder="Middle name" name="middleName">
-                  <label for="mname" class="mt-1 ml-1">Middle Name</label>
-                </div>
-               </div>
-              <div class="form-row">
-                  <div class="col-8">
-                      <input type="date" name="DOB" id="bday" class="form-control" required>
-                      <label for="bday" class="mt-1 ml-1">Date of Birth.</label>
-                    </div>
-                      <div class="ml-5 col-3" >
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female" class="mt-1 ml-1">Female</label>
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male" class="mt-1 ml-1">Male</label>
-                        <div><label>Gender</label></div>
-
-      
-                  </div>
-      
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="addrLine1" required>
-                <label for="inputAddress">Address line 1</label>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="addrLine2" required>
-                <label for="inputAddress2">Address line 2</label>
-
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputCity" name="city">
-                  <label for="inputCity" required>City</label>
-                </div>
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputParish" name="parish">
-                    <label for="inputParish" required>Parish</label>
-                </div>
-
-                </div>
-        </fieldset>
-        <!-- End Child's information -->
-        <fieldset>
-            <div class="form-row" >
-                <h5 class="ml-2"><strong>Parent/Guardian's information</strong></h5>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                  <input id="guardianName" type="text" class="form-control" placeholder="John Doe" required name="guardianName">
-                  <label for="guardianName" class="mt-1 ml-1">Full Name</label>
-                </div>
-            </div>
-            <div class="form-row">
-              <div class="col">
-                <input id="guardianEmail" type="email" class="form-control" placeholder="example@example.com" name="guardianEmail">
-                <label for="guardianEmail" class="mt-1 ml-1">Email</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col">
-                <div>
-                  <label for="guardianAddress">Address</label>
-                </div>
-                <label for="addressCheck">Same as child address</label>
-                <input type="checkbox" value="Same as child" id="guardianAddress" onclick="checkAddress()">
-              
-              </div>
-                
-            </div>
-            <div id="otherAddress">
-              
-              <div class="form-group">
-                <input type="text" class="form-control" id="guardianAddressLine1" placeholder="1234 Main St" name="guardianAddressLine1">
-                <label for="guardianAddressLine1">Address</label>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="guardianAddressLine2" placeholder="Apartment, studio, or floor" name="guardianAddressLine2">
-                <label for="guardianAddressLine2">Address 2</label>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="guardianAddressCity" name="guardianAddressCity">
-                  <label for="guardianAddressCity">City</label>
-                </div>
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="guardianAddressParish" name="guardianAddressParish">
-                    <label for="guardianAddressParish">Parish</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-3">
-                <label for="guardianTel1">Cellphone</label>
-                <input type="tel" class="form-control" id="guardianTel1" name="guardianTel1" placeholder="(555)555-5555" required>
-              </div>
-              <div class="form-group col-md-3">
-                  <label for="guardianTel2">Home Phone</label>
-                  <input type="tel" class="form-control" id="guardianTel2" placeholder="(555)555-5555" name="guardianTel2">
+    </section>
+    <section>
+      <div class="content">
+          <form method="POST" name="childInfo" class="mt-1">
+            <!-- Childs Information  -->
+            <fieldset name="childInfo">
+              <legend>Child Information</legend>
+                <div class="form-row" > 
+                    <label>
+                      <span>
+                        First Name
+                      </span>
+                      <input id="fname" type="text" class="form-control" placeholder="First name" name="firstName" required>
+                    </label>
                   
-              </div>
-          </div>
-        </fieldset>
-        <!-- Health information -->
-        <fieldset class="ml-2">
-          <div class="form-row" >
-            <h5><strong>Health information</strong></h5>
-          </div>
-          <div class="form-row">
-            <input id="physicianName" type="text" class="form-control" placeholder="John Doe" required name="physician">
-            <label for="physician" class="mt-1">Physicians Name</label>
-          </div>
-          <div class="form-row">
-            <input id="physicianAddress" type="text" class="form-control" placeholder="Physicians Address" name="physicianAddress">
-            <label for="healthCentre" class="mt-1 ml-1">Physicians Address</label>
-          </div>
-          <div class="form-row">
-            <input id="physicianOffice" type="text" class="form-control" placeholder="Health Centre or Clinic" name="physicianOffice">
-            <label for="healthCentre" class="mt-1">Health Centre</label>
-          </div>
-          <div class="form-row">
-            <div class="col-md-3">
-              <label for="physicianTel">Telephone#</label>
-              <input type="tel" class="form-control" id="physicianTel" placeholder="(555)555-5555" name="physicianTel">
-            </div>
-              
-          </div>
-          <div class="form-row mt-3">
-
-            <input type="text" class="form-control" id="alergies" placeholder="measels, chicken poxs," name="alergies"> 
-            <label for="alergies">Alergies</label>
- 
-          </div>
-
-        </fieldset>
-        <!-- Emergency contacts -->
-        <fieldset class="">
-          <div class="form-row ml-2" >
-            <h5 class=""><strong>Emergency Contacts</strong></h5>
-          </div>
-          <div class="form-row ml-1">
-              <div class="col-md-6">
-                <div>
-                  <p><strong>Contact 1</strong></p>
+                    
+                    <label>
+                      <span>Last Name</span>
+                      <input id="fname" type="text" class="form-control" placeholder="Last name" name="lastName">
+                    </label>
+                    
+                      <label>
+                        <span>Middle Name</span>
+                        <input id="mname" type="text" class="form-control" placeholder="Middle name" name="middleName">
+                      </label>
+                  
                 </div>
-                <input class="form-control" type="text" id="contact1Name" placeholder="Full name" name="contact1Name">
-                <label for="contact1">Full Name</label>
-                <input class="form-control" type="text" id="relationship1" name="contact1Relationship">
-                <label for="relationship1">Relationship</label>
-                <input class="form-control" type="text" id="contact1Address" placeholder="Address" name="contact1Address">
-                <label for="contact1Address">Address</label>
-                <input class="form-control" type="tel" id="contact1Tel" placeholder="(555)555-5555" name="contact1Tel">
-                <label for="contact1Tel">Telephone#</label>
-              </div>
-              <div class="col-md-6">
-                <div>
-                  <p><strong>Contact 2</strong></p>
+                <div class="form-row">
+                    <label>
+                      <span>Date of Birth.</span>
+                      <input type="date" name="DOB" class="form-control" required>
+                    </label>
+                    <div>
+                      <p style="font-weight: 500">Gender</p>
+                      <div class="form-row">
+                        <label>
+                          <input type="radio" id="female" name="gender" value="female">
+                          <span>Female</span>
+                        </label>
+                        
+                        <label>
+                          <input type="radio" id="male" name="gender" value="male">
+                          <span>Male</span>
+                        </label>   
+                      </div>
+                           
+                    </div>
+        
                 </div>
-                <input class="form-control" type="text" id="contact2Name" placeholder="Full name" name="contact2Name">
-                <label for="contact2">Full Name</label>
-                 <input class="form-control" type="text" id="relationship2" placeholder="" name="contact2Relationship">
-                <label for="relationship2">Relationship</label>
-                <input class="form-control" type="text" id="contact2Address" placeholder="Address" name="contact2Address">
-                <label for="contact2Address">Address</label>
-                <input class="form-control" type="tel" id="contact2Tel" placeholder="(555)555-5555" name="contact2Tel">
-                <label for="contact2Tel">Telephone#</label>
+                <div class="form-group">                  
+                  <label>
+                    <span>Address line 1</span>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="addrLine1" required>
+                  </label>      
+                </div>
+                <div class="form-group">
+                  <label>
+                    <span>Address line 2</span>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="addrLine2" required>
+                  </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                        <span>City</span>
+                        <input type="text" class="form-control" id="inputCity" name="city">
+                    </label>
+                    <label>
+                        <span>Parish</span>
+                        <input type="text" class="form-control" id="inputParish" name="parish">
+                    </label> 
+                </div>
+          </fieldset>
+          <!-- End Child's information -->
+          <fieldset>
+              <legend>Parent/Guardian's information</legend>
+
+              <div class="form-row">
+                    <label>
+                      <span>Full Name: </span>
+                      <input id="guardianName" type="text" class="form-control" placeholder="John Doe" required name="guardianName">
+                    </label>
               </div>
-          </div>
-        </fieldset>
-        <!-- Declaration -->
-        <fieldset class=" ml-2">
-          <div class="form-row" >
-            <h5 class=""><strong>Declaration</strong></h5>
-          </div>
-          <div>
-            <input type="checkbox" id="agree" required>
-              <label for="agree" class="text-small">
-                I agree that all the information entered above is correct to the best of my knowledge, and that any information that is falsely given may result in my child/ward being removed from this institution. 
+             
+              <div class="form-row">
+                  
+                  <label>
+                    <span>Email</span>
+                    <input id="guardianEmail" type="email" class="form-control" placeholder="example@example.com" name="guardianEmail">
+                  </label>
+              </div>
+              <div class="form-row">
+                  <label>
+                    <span>Address</span>
+                    <label for="addressCheck">
+                      <input type="checkbox" value="Same as child" id="guardianAddress" onclick="checkAddress()">
+                      <span>Same address as child</span>
+                    </label>
+                  </label>
+              </div>
+                  
+              <div id="otherAddress">
+                
+                <div class="form-group">
+                  <label>
+                    <span>Address Line 1</span>
+                    <input type="text" class="form-control" id="guardianAddressLine1" placeholder="1234 Main St" name="guardianAddressLine1">
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    <span>Address Line 2</span>
+                    <input type="text" class="form-control" id="guardianAddressLine2" placeholder="Apartment, studio, or floor" name="guardianAddressLine2">
+                  </label>
+                </div>
+    
+                <div class="form-row">
+                  <label> 
+                    <span>City</span>
+                    <input type="text" class="form-control" id="guardianAddressCity" name="guardianAddressCity">
+                  </label> 
+                  <label>
+                      <span>Parish</span>
+                      <input type="text" class="form-control" id="guardianAddressParish" name="guardianAddressParish">
+                  </label>  
+                  
+                </div>
+                <div class="form-row">
+                    <label>
+                      <span>Cellphone</span>
+                      <input type="tel" class="form-control" id="guardianTel1" name="guardianTel1" placeholder="(555)555-5555" required>
+                    </label>
+                    
+
+                  <div class="form-group col-md-3">
+                      <label for="guardianTel2">
+                        <span>Home Phone</span>
+                        <input type="tel" class="form-control" id="guardianTel2" placeholder="(555)555-5555" name="guardianTel2">
+                      </label>
+
+                </div>
+            </fieldset>
+            <!-- Health information -->
+            <fieldset class="ml-2">
+                <legend>Health Information</legend>
+                <div class="form-row">
+                  <label>
+                    <span>Physicians Name</span>
+                    <input id="physicianName" type="text" class="form-control" placeholder="John Doe" required name="physician">
+                  </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                      <span>Physician Address</span>
+                      <input id="physicianAddress" type="text" class="form-control" placeholder="Physicians Address" name="physicianAddress">
+                    </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    <span>Health Centre</span>
+                    <input id="physicianOffice" type="text" class="form-control" placeholder="Health Centre or Clinic" name="physicianOffice">
+                  </label>
+                </div>
+                <div class="form-row">
+
+                    <label>
+                      <span>Telephone#</span>
+                      <input type="tel" class="form-control" id="physicianTel" placeholder="(555)555-5555" name="physicianTel">
+                    </label>
+                    <label>
+                      <span>Alergies</span>
+                      <input type="text" class="form-control" id="alergies" placeholder="measels, chicken poxs," name="alergies"> 
+                    </label>
+                    
+                    
+                </div>
+    
+            </fieldset>
+            <!-- Emergency contacts -->
+            <fieldset class="">
+                <legend>Emergency Contact</legend>
+                <div class="form-row">
+                  <div>
+                    <div>
+                      <p><strong>Contact 1</strong></p>
+                    </div>
+                    
+                    <label>
+                      <span>Full Name</span>
+                      <input class="form-control" type="text" id="contact1Name" placeholder="Full name" name="contact1Name">
+                    </label>
+                    
+                    <label>
+                      <span>Relationship</span>
+                      <input class="form-control" type="text" id="relationship1" name="contact1Relationship">
+                    </label>
+                    
+                    <label>
+                      <span>Address</span>
+                      <input class="form-control" type="text" id="contact1Address" placeholder="Address" name="contact1Address">
+                    </label>
+                    
+                    <label>
+                      <span>Telephone#</span>
+                      <input class="form-control" type="tel" id="contact1Tel" placeholder="(555)555-5555" name="contact1Tel">
+                    </label>
+                  </div>
+                  <div>
+                    <div>
+                      <p><strong>Contact 2</strong></p>
+                    </div>
+                    
+                    <label>
+                      <span>Full Name</span>
+                      <input class="form-control" type="text" id="contact2Name" placeholder="Full name" name="contact2Name">
+                    </label>
+                    
+                    <label>
+                      <span>Relationship</span>
+                      <input class="form-control" type="text" id="relationship2" placeholder="" name="contact2Relationship">
+                    </label>
+                    
+                    <label>
+                      <span>Address</span>
+                      <input class="form-control" type="text" id="contact2Address" placeholder="Address" name="contact2Address">
+                    </label>
+                    
+                    <label>
+                      <span>Telephone#</span>
+                      <input class="form-control" type="tel" id="contact2Tel" placeholder="(555)555-5555" name="contact2Tel">
+                    </label>
+                  </div>
+              </div>
+            </fieldset>
+            <!-- Declaration -->
+            <fieldset class="mt-1">
+              <p><strong>Declaration</strong></p>
+              <label class="text-small flex-align-center" >
+                  <input type="checkbox" id="agree" required>
+                  <span>I agree that all the information entered above is correct to the best of my knowledge, and that any information that is falsely given may result in my child/ward being removed from this institution. </span> 
               </label>
-
-          </div>
-        </fieldset>
-            <input class="btn btn-success btn-sm mb-4" type="submit" value="submit">
-    </form>
+            </fieldset>
+            <div class="mt-1 text-center" style="margin: 2rem;">
+              <button class="btn btn--primary" style="width: 300px;">Submit Form</button>
+            </div>
+                
+        </form>
+      </div>
+    </section>
 </main>
 <%- include("_footer")%>

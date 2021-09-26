@@ -29,6 +29,12 @@ h2 {
   font-size: 2em;
   margin: 0;
 }
+form {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover {
+  color: blueviolet;
+}
 .nav {
   max-width: 1240px;
   margin: auto;
@@ -234,6 +240,61 @@ footer {
   font-weight: bold;
 }
 
+#contactForm {
+  width: 500px;
+  margin: auto;
+}
+label {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+}
+input[type="email"],
+input[type="text"],
+input[type="date"],
+input[type="tel"] {
+  padding-left: 5px;
+  height: 2.1rem;
+  border-radius: 5px;
+  border: 1px solid var(--purple-font);
+  width: 100%;
+  letter-spacing: 1.1px;
+}
+input:focus,
+textarea:focus {
+  outline-color: blueviolet;
+}
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+  height: 5rem;
+  border: 1px solid var(--purple-font);
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.1px;
+  padding-left: 5px;
+}
+
+form[name="childInfo"] fieldset {
+  border: 3px solid var(--purple-font);
+}
+form[name="childInfo"] legend,
+form[name="childInfo"] label span {
+  font-weight: 500;
+}
+.form-row {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: stretch;
+  flex-grow: 1;
+  gap: 20px;
+}
+.form-row > * {
+  flex-grow: 1;
+}
+
 /* 
     ============
      Components
@@ -247,8 +308,10 @@ footer {
   border-radius: 15px;
   color: white;
   transition: background-color 300ms linear;
+  border: none;
 }
 .btn--primary {
+  color: white;
   background-color: var(--purple-font);
 }
 section[class^="divider-"] img {
@@ -298,6 +361,9 @@ section[class^="divider-"] img {
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
 .text-small {
   font-size: small;
   padding: 5px 0;
@@ -312,6 +378,10 @@ section[class^="divider-"] img {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+}
+.flex-align-center {
+  display: flex;
+  align-items: center;
 }
 .mt-1 {
   margin-top: 1rem;
@@ -342,8 +412,17 @@ article footer {
 .li-spacing li {
   margin-bottom: 10px;
 }
-.li-spacing li h6 {
-  font-weight: bold;
+.li-spacing li h2,
+.faq h2 {
+  font-size: 1.1em;
+  text-align: left;
+  font-weight: 500;
+}
+.faq h2 {
+  font-weight: 600;
+}
+.faq > div {
+  margin: 15px;
 }
 .border-faded {
   background: rgba(0, 0, 0, 0.7);
@@ -366,11 +445,21 @@ div.watermark::after {
   width: 100%;
 }
 
+.contact h2 {
+  font-size: 1.2em;
+  text-align: start;
+  margin: 5px 0;
+}
+.contact {
+  margin: 10px 0;
+}
+
 /* 
     =======
     Layout
     =======
 */
+
 .row {
   width: 100%;
 }
@@ -559,8 +648,11 @@ div.watermark::after {
 Hover States
 ==============
 */
-.btn--primary:hover {
+a.btn--primary:hover,
+button.btn--primary:hover,
+input.btn--primary:hover {
   background-color: blueviolet;
+  color: white;
 }
 .nav__link:not(.btn):hover {
   text-decoration: blueviolet underline 3px;
