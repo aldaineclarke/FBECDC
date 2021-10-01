@@ -41,7 +41,7 @@
                     </label>
                     <div>
                       <p style="font-weight: 500">Gender</p>
-                      <div class="form-row">
+                      <div class="flex gap-1">
                         <label>
                           <input type="radio" id="female" name="gender" value="female">
                           <span>Female</span>
@@ -109,13 +109,13 @@
                   
               <div id="otherAddress">
                 
-                <div class="form-group">
+                <div class="form-row">
                   <label>
                     <span>Address Line 1</span>
                     <input type="text" class="form-control" id="guardianAddressLine1" placeholder="1234 Main St" name="guardianAddressLine1">
                   </label>
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                   <label>
                     <span>Address Line 2</span>
                     <input type="text" class="form-control" id="guardianAddressLine2" placeholder="Apartment, studio, or floor" name="guardianAddressLine2">
@@ -140,11 +140,11 @@
                     </label>
                     
 
-                  <div class="form-group col-md-3">
-                      <label for="guardianTel2">
-                        <span>Home Phone</span>
-                        <input type="tel" class="form-control" id="guardianTel2" placeholder="(555)555-5555" name="guardianTel2">
-                      </label>
+                 
+                    <label>
+                      <span>Home Phone</span>
+                      <input type="tel" class="form-control" id="guardianTel2" placeholder="(555)555-5555" name="guardianTel2">
+                    </label>
 
                 </div>
             </fieldset>
@@ -243,7 +243,7 @@
             <!-- Declaration -->
             <fieldset class="mt-1">
               <p><strong>Declaration</strong></p>
-              <label class="text-small flex-align-center" >
+              <label class="text-small flex" >
                   <input type="checkbox" id="agree" required>
                   <span>I agree that all the information entered above is correct to the best of my knowledge, and that any information that is falsely given may result in my child/ward being removed from this institution. </span> 
               </label>
