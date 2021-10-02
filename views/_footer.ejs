@@ -92,6 +92,24 @@
     let year = document.querySelector("#year");
     year.innerHTML = currentYear.getFullYear();
 
+    let navBtn = document.querySelector(".hamburger");
+    let navMobile = document.querySelector(".desktop");
+    let header = document.querySelector(".main-header");
+    console.log(navMobile);
+    navBtn.addEventListener("click",(event)=>{
+        navMobile.classList.toggle("active");
+        navBtn.classList.toggle("active");
+
+        if(navMobile.classList.contains("active")){
+            header.classList.add("active");
+        }else{
+            setTimeout(()=>{
+                header.classList.remove("active");
+            },500);
+        }
+
+    })
+
 </script>
 <%- include("_scripts");%>
 
