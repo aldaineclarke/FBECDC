@@ -44,6 +44,7 @@ nav {
   max-width: 1240px;
   margin: auto;
   align-items: center;
+  padding: 0 10px;
 }
 .nav {
   font-size: 0.9em;
@@ -103,7 +104,7 @@ main {
 main .content {
   max-width: 1240px;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
 }
 .content h2 {
   text-align: center;
@@ -163,9 +164,10 @@ footer {
 
 .offered {
   margin: 3rem 0;
+  gap: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 60vh;
+  min-height: 60vh;
 }
 .offered img {
   height: 100%;
@@ -187,6 +189,7 @@ footer {
 .classTypes {
   margin-top: 3rem;
   display: flex;
+  gap: 1rem;
   justify-content: space-evenly;
 }
 .classCard {
@@ -257,7 +260,7 @@ footer {
 }
 
 #contactForm {
-  width: 500px;
+  width: 100%;
   margin: auto;
 }
 label {
@@ -426,6 +429,7 @@ article footer {
   margin-top: 5rem;
   font-size: 1.2em;
   background-color: transparent;
+  line-height: normal;
 }
 
 .li-spacing li {
@@ -500,7 +504,7 @@ div.watermark::after {
   text-align: center;
   max-width: 1240px;
   margin: auto;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   align-items: center;
   line-height: 18px;
@@ -739,13 +743,122 @@ input.btn--primary:hover {
   overflow-x: visible;
 }
 @media (max-width: 480px) {
-  body > header {
+  /* End Header */
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .slide-right-anim p,
+  p {
+    font-size: 0.9em;
+    line-height: 24px;
+  }
+  .offered {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    gap: 2rem;
+  }
+  .offers {
+    gap: 2rem;
+  }
+  .offers h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  .classTypes {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  div.classCard {
+    width: 90%;
+    height: 70vh;
+  }
+  .team-photos {
+    /* grid-template-columns: 1fr;
+    gap: 3rem; */
+    animation-name: tempSlide;
+    animation-duration: 20000ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    gap: 0px;
+  }
+  .temp-carousel {
+    width: 100%;
     overflow-x: hidden;
+  }
+  .circle-photo {
+    width: 100vw;
+  }
+  div.circle-photo img {
+    width: 45vh;
+    height: 45vh;
+  }
+  .bg-violet {
+    margin: 100px 0;
+  }
+  .img-400 {
+    width: 90%;
+    height: auto;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row > * {
     width: 100%;
   }
+  label {
+    width: 100%;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid > div {
+    display: flex;
+  }
+  .social,
+  .social a {
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
+@media (max-width: 700px) {
+  .offered {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    gap: 2rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    justify-items: center;
+  }
+  .grid-container #contactForm {
+    width: 90%;
+  }
+
+  .contact iframe {
+    margin: auto;
+  }
+}
+@media (max-width: 760px) {
   /* Header */
   header {
     padding: 5px;
+  }
+  #contactForm {
+    width: 40vw;
   }
   .desktop {
     position: absolute;
@@ -798,40 +911,16 @@ input.btn--primary:hover {
   .hamburger.active {
     background-color: blueviolet;
   }
-
-  /* End Header */
-  h1 {
-    font-size: 1.8em;
-  }
-  h2 {
-    font-size: 1.6em;
-  }
-
-  .slide-right-anim p,
-  p {
-    font-size: 0.9em;
-    line-height: 24px;
-  }
-  .offered {
-    grid-template-columns: 1fr;
-    height: fit-content;
-    gap: 2rem;
-  }
-  .offers {
-    gap: 2rem;
-  }
-  .offers h3 {
-    font-size: 1.2em;
-    margin: 5px 0;
-  }
   .classTypes {
     flex-direction: column;
     align-items: center;
     gap: 4rem;
   }
+  .classCard {
+    width: 400px;
+    height: 500px;
+  }
   .team-photos {
-    /* grid-template-columns: 1fr;
-    gap: 3rem; */
     animation-name: tempSlide;
     animation-duration: 20000ms;
     animation-fill-mode: both;
@@ -846,46 +935,21 @@ input.btn--primary:hover {
   .circle-photo {
     width: 100vw;
   }
-  .bg-violet {
-    margin: 100px 0;
+  .circle-photo img {
+    height: 350px;
+    width: 350px;
   }
-  .img-400 {
-    width: 90%;
-    height: auto;
-  }
-  .form-row {
-    flex-direction: column;
-  }
-  .form-row > * {
-    width: 100%;
-  }
-  label {
-    width: 100%;
-  }
-  h4,
-  h5,
-  h6 {
-    font-size: larger;
-    font-weight: 600;
-  }
-
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
+    margin: 5px;
   }
   .footer-grid > div {
     display: flex;
   }
-  .social,
-  .social a {
-    justify-content: flex-end;
-    text-align: right;
-  }
 }
-@media (min-width: 768px) {
-  .navbar {
-    display: block;
-  }
-  .phoneNum {
-    display: block;
+@media (min-width: 780px) and (max-width: 1240px) {
+  .circle-photo img {
+    height: 20vw;
+    width: 20vw;
   }
 }
