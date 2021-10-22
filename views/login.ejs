@@ -1,27 +1,52 @@
-<%- include("_header");%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keywords" content="Firstborn Early childhood, FBECDC, Firstborn, Early Childhood, Early Childhood Jamaica ">
+  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRST BORN ECDC</title>
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+  <!-- Other Style sheets -->
+  <link rel="stylesheet" href="/css/fullCalendar-main.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://kit.fontawesome.com/7c2ff4380c.js" crossorigin="anonymous"></script>
 
 
-    <main class="container">
-        <div class="watermark"></div>
-        <% if (messages.error) { %>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <%= messages.error  %>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-        <% } %>
-        <div class="row justify-content-end mt-5 ">
-            <div class="col-md-4">
-                <form action="" method="POST" class="mt-2 p-3 border border-secondary bg-white">
-                    <legend class="pb-3">Log in</legend>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" class="form-control">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" class="form-control">
-                    <div class="mt-2" >
-                        <button class="btn btn-success btn-sm" type="submit" >Login</button>
+</head>
+
+<body class="login">
+    <main>
+        <div class="content">
+            <!-- <img class="login__logo" src="images/FBECDC_Trans_crest.png" alt="school crest"> -->
+
+            <div class="login__grid mt-2">
+                <img class="login__img" src="images/stanley-dai-73OZYNjVoNI-unsplash.jpg" alt="sideImg">
+                <form action="" method="POST" class="login__form">
+                    <h1>Log in</h1>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                    </label>
+                    
+                    <label>
+                        <span>Password</span>                   
+                        <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                    </label>
+                    
+                    <div class="flex" >
+                        <button class="btn btn--primary w-100" type="submit" >Login</button>
                     </div>
+                    <p class="mt-1">Forgot your password? <span class="bold"><a href="#">Reset Password</a></span>.</p>
         
                 </form>
             </div>
@@ -29,5 +54,18 @@
         
 
     </main>
+    <footer class="login__footer">
+        <p>&copy; Copyright <span id="year"></span></p>
 
-<%- include("_footer");%>
+    </footer>
+    <script>
+        let currentYear = new Date();
+        let year = document.querySelector("#year");
+        year.innerHTML = currentYear.getFullYear();
+    
+    </script>
+
+<%- include("_scripts");%>
+
+</body>
+</html>

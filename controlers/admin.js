@@ -22,13 +22,13 @@ initializePassport(passport ,
         return user;
     }
 );
-adminRoute.use(flash());
-adminRoute.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave:false,
-    saveUninitialized:false
+// adminRoute.use(flash());
+// adminRoute.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave:false,
+//     saveUninitialized:false
 
-}));
+// }));
 adminRoute.use(passport.initialize());
 adminRoute.use(passport.session())
 adminRoute.get("/",checkAuthenticated, async (req, res)=>{
