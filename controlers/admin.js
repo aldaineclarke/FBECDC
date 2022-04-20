@@ -31,9 +31,12 @@ initializePassport(passport ,
 // }));
 adminRoute.use(passport.initialize());
 adminRoute.use(passport.session())
-adminRoute.get("/",checkAuthenticated, async (req, res)=>{
-    events = await CalendarEvent.find().sort({start:"desc"});
-    res.render("admin-home",{admin:req.user, events : events, page:" Dashboard"});
+// adminRoute.get("/",checkAuthenticated, async (req, res)=>{
+//     events = await CalendarEvent.find().sort({start:"desc"});
+//     res.render("admin-home",{admin:req.user, events : events, page:" Dashboard"});
+// });
+adminRoute.get("/", async (req, res)=>{
+    res.render("admin-home");
 });
 adminRoute.get("/register", checkAuthenticated,(req,res)=>{
     res.render("adminRegister");
