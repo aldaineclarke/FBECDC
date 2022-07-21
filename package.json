@@ -4,8 +4,8 @@
   "description": "School Website",
   "main": "server.js",
   "scripts": {
-    "start": " node server.js",
-    "devStart": "nodemon server.js"
+    "start": " node backend/server.js",
+    "devStart": "nodemon backend/server.js"
   },
   "author": "",
   "license": "ISC",
