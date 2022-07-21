@@ -1,0 +1,118 @@
+<footer>
+    <div class="footer-grid">
+        <div class="footer-sizing">
+            <p class="footer__head">Get to Know Us</p>
+            <ul>
+                <li>
+                    <a href="/privacy-policy">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="/terms">
+                        Terms of Service
+                    </a>
+                </li>
+                <li>
+                    <a href="/FAQ's">
+                        Frequently asked questions
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="info" class="footer-sizing">
+            <p class="footer__head">School Info</p>
+            <ul>
+                <li>
+                    <a href="/handbook">
+                        Student Handbook
+                    </a>
+                </li>
+                <li>
+                    <a href="/register">
+                        Registration
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="footer-sizing">
+            <p class="footer__head">Contact Us</p>
+            <ul>
+                <li>
+                    <a href="/contact-us">
+                        Contact Us <i class=" ml-1 far fa-envelope"></i>
+                    </a>
+                    <div class="">
+                        <address>
+                            Twickenham Park,
+                            New Nursery,<br>
+                            Spanish Town,
+                            St. Catherine.<br>
+                            Tel(876)790-5361
+                        </address>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-sizing">
+            <p class="footer__head">Other Links</p>
+            <ul>
+                <li>
+                    <a href="/admin">
+                        Admin Page
+                    </a>
+
+                </li>
+                <li>
+                    <div>
+                        <a href="www.facebook.com"><i class="fab fa-facebook mt-1"></i> <span>Social
+                                Links</span> </a>
+                    </div>
+
+                </li>
+            </ul>
+
+
+
+
+        </div>
+
+    </div>
+    <div class="copyright">
+        <p>
+            &copy; Copyright <span id="year"></span> by the First&nbsp;Born&nbsp;ECDC. All Rights Reserved
+        </p>
+    </div>
+
+
+</footer>
+<script>
+    let currentYear = new Date();
+    let year = document.querySelector("#year");
+    year.innerHTML = currentYear.getFullYear();
+
+    let navBtn = document.querySelector(".hamburger");
+    let navMobile = document.querySelector(".desktop");
+    let header = document.querySelector(".main-header");
+    console.log(navMobile);
+    navBtn.addEventListener("click",(event)=>{
+        navMobile.classList.toggle("active");
+        navBtn.classList.toggle("active");
+
+        if(navMobile.classList.contains("active")){
+            header.classList.add("active");
+        }else{
+            setTimeout(()=>{
+                header.classList.remove("active");
+            },500);
+        }
+
+    })
+
+</script>
+<%- include("_scripts");%>
+
+</body>
+
+</html>
