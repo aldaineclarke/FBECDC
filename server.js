@@ -14,7 +14,7 @@ const staticDirectory = express.static(staticPath);
 const connectDB = require("./connection");
 const adminRoute = require("./controlers/admin");
 const methodOveride = require("method-override");
-connectDB();
+// connectDB();
 // const cssDirectory = express.static(cssPath);
 
 // middlewares
@@ -115,28 +115,28 @@ app.post('/registration-form', async (req,res)=>{
 app.listen(port);
 console.log("listening on port ", port);
 
-const mailgun = require("mailgun-js");
-const DOMAIN = process.env.MAILGUNDOMAIN;
-const MAILGUNAPI = process.env.MAILGUNAPI;
+// const mailgun = require("mailgun-js");
+// const DOMAIN = process.env.MAILGUNDOMAIN;
+// const MAILGUNAPI = process.env.MAILGUNAPI;
 
-const mg = mailgun({apiKey: MAILGUNAPI , domain: DOMAIN});
-// const data = {
-// 	from: 'Test <aldaineclarke1@gmail.com>',
-// 	to: 'firstbornecdc@gmail.com',
-// 	subject: 'Hello',
-// 	text: 'Testing some Mailgun awesomness!'
-// };
-// mg.messages().send(data, function (error, body) {
-// 	console.log(body);
-// });
-function sendMessage(name,sender='firstbornecdc@gmail.com',recipient='firstbornecdc@gmail.com',msg){
-    let data = {
-        from: sender,
-        to: recipient,
-        subject: 'Requesting Info',
-        text: `${name},\n ${msg}`,
-    }
-    mg.messages().send(data,(error,body)=>{
-        console.log(body.message);
-    });
-}
+// const mg = mailgun({apiKey: MAILGUNAPI , domain: DOMAIN});
+// // const data = {
+// // 	from: 'Test <aldaineclarke1@gmail.com>',
+// // 	to: 'firstbornecdc@gmail.com',
+// // 	subject: 'Hello',
+// // 	text: 'Testing some Mailgun awesomness!'
+// // };
+// // mg.messages().send(data, function (error, body) {
+// // 	console.log(body);
+// // });
+// function sendMessage(name,sender='firstbornecdc@gmail.com',recipient='firstbornecdc@gmail.com',msg){
+//     let data = {
+//         from: sender,
+//         to: recipient,
+//         subject: 'Requesting Info',
+//         text: `${name},\n ${msg}`,
+//     }
+//     mg.messages().send(data,(error,body)=>{
+//         console.log(body.message);
+//     });
+// }
