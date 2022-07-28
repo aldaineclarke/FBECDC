@@ -1,24 +1,23 @@
-if (process.env.DEBUG === "True"){
-    require("dotenv").config()
-}
+require("dotenv").config()
 "use strict";
 const express = require("express");
-const bodyParser = require("body-parser");
 const path = require("path");
-const Student = require("./models/students");
+const Student = require("./models/student.schema");
 const CalendarEvent = require('./models/events')
 const staticPath = path.join(__dirname +'/staticfiles');
 const port = process.env.PORT || 5000;
 const app = express();
 const staticDirectory = express.static(staticPath);
 const connectDB = require("./connection");
-const adminRoute = require("./controlers/admin");
+// const adminRoute = require("./controlers/admin");
+const APIRouter = require("../backend/API/api.v1");
 const methodOveride = require("method-override");
-// connectDB();
+connectDB();
 // const cssDirectory = express.static(cssPath);
 
 // middlewares
-app.use(bodyParser.urlencoded({ extended:true}));
+app.use(express.urlencoded({ extended:true}));
+app.use(express.json());
 app.use(methodOveride("_method"));
 app.use(staticDirectory); //all static files directory
 app.use('/admin', staticDirectory);
@@ -27,10 +26,11 @@ app.use('/admin', staticDirectory);
 app.set("views", [path.join(__dirname,"/views"),
                   path.join(__dirname,"/views/event_views")
 ]);
-app.use("/admin",adminRoute);
+// app.use("/admin",adminRoute);
 app.set('view engine', 'ejs'); // set the view engine to ejs
 
 
+app.use("/api/v1/", APIRouter)
 
 app.get('/', (req,res)=>{
     res.render('index');
