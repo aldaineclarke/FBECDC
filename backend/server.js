@@ -3,7 +3,7 @@ require("dotenv").config()
 const express = require("express");
 const path = require("path");
 const Student = require("./models/student.schema");
-const CalendarEvent = require('./models/events')
+const CalendarEvent = require('./models/event.schema')
 const staticPath = path.join(__dirname +'/staticfiles');
 const port = process.env.PORT || 5000;
 const app = express();
