@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const studentController = require("../controlers/student.controller")
+const studentController = require("../controllers/student.controller")
 router.
     route("/")
     .get(studentController.getAllStudents)
