@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { response } = require("express");
-const URI = process.env.URI
+const URI = (process.env.NODE_ENV === "production") ?process.env.URI : process.env.DEV_DB_URI
 const connectDB = async ()=>{
     try{
         await mongoose.connect(URI, { 
