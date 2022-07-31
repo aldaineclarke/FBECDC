@@ -1,4 +1,4 @@
-require("dotenv").config()
+require("dotenv").config({path:"./backend.env"})
 "use strict";
 const express = require("express");
 const path = require("path");
