@@ -42,6 +42,7 @@ testem.log
 Thumbs.db
 
 # environments
-*.env
+backend.env
+.env
 
 
