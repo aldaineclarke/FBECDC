@@ -1,4 +1,4 @@
-const PostsController = require("../controlers/post.controller");
+const PostsController = require("../controllers/post.controller");
 
 const router = require("express").Router();
 
