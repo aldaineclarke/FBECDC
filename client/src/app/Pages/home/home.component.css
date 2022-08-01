@@ -1,0 +1,28 @@
+.offered::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -140px;
+    height: 140px;
+    width: 100%;
+    background-image: url("/assets/wave-up.png");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+  .offered{
+    position:relative;
+  }
+  .offered::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -140px;
+        height: 140px;
+        width: 100%;
+        background-image: url("/assets/wave-down.png");
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+      
+  }
