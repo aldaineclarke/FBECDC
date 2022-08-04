@@ -1,0 +1,53 @@
+<header class="shadow-md">
+    <nav class="mx-auto p-4">
+        <ul class="nav" role="navigation" aria-label="main-navigation">
+            <li class="nav__item logo">
+                <a routerLink="/" class="nav__link text-3xl font-bold ">First Born ECDC</a>
+            </li>
+           <div class="md:main-nav md:flex md:flex-1 hidden">
+            <li class="nav__item">
+                <a href="" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Calendar</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Contacts</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link">Gallery</a>
+            </li>
+            <li class="nav__item  cta-btn">
+                <a href="" class="nav__link py-2 px-8 bg-purple-700 text-white font-bold rounded-3xl hover:bg-purple-800 transition ">Enrol</a>
+            </li>
+           </div>
+            <li class=" md:hidden inline-block ml-auto "><button (click)="toggleNav()" class="rounded-full flex items-center justify-center h-9 w-9 bg-purple-700 text-white hover:bg-purple-800"><i class="fa-solid fa-bars"></i></button></li>
+        </ul>
+
+        <div class="overlay md:hidden" *ngIf="navActive"></div>
+        <div [ngClass]="
+        {
+            'sidebar h-screen w-[250px] shadow-md gap-5 flex flex-col  absolute bg-white top-0 left-0 pt-4 transition-transform ease-in-out duration-500 md:hidden': true, 
+            'translate-x-[-250px]' : !navActive, 
+            'translate-x-0':navActive
+        }
+        ">
+            <div class="close flex item-center justify-between px-4">
+                <button class="text-xl" (click)="toggleNav()">
+                    <i class="fa-solid fa-xmark "></i>
+                </button>
+                <button class="nav__link py-1 px-8 bg-purple-700 text-white font-bold rounded-3xl hover:bg-purple-800 transition ">Enrol</button>
+            </div>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Calendar</a>
+            <a href="">Contact</a>
+            <a href="">Gallery</a>
+        </div>
+    </nav>
+</header>
+
+
