@@ -1,4 +1,4 @@
-.offered::before {
+.wave-bg::before {
     position: absolute;
     content: "";
     left: 0;
@@ -10,19 +10,108 @@
     background-size: cover;
     z-index: -1;
   }
-  .offered{
-    position:relative;
+.wave-bg{
+  position:relative;
+}
+.wave-bg::after{
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -140px;
+      height: 140px;
+      width: 100%;
+      background-image: url("/assets/wave-down.png");
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    
+}
+
+  .team-photos {
+    margin-top: 5rem;
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 20px;
   }
-  .offered::after{
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: -140px;
-        height: 140px;
-        width: 100%;
-        background-image: url("/assets/wave-down.png");
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-      
+
+  .circle-photo img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: filter 500ms linear;
   }
+
+  .circle-photo img:hover {
+    filter: grayscale(0);
+  }
+
+  .circle-photo {
+    text-align: center;
+  }
+
+  .circle-photo h4 {
+    margin: 5px 0;
+  }
+
+.team-photos {
+  display:grid;
+  animation-name: tempSlide;
+  animation-duration: 20000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  gap: 0px;
+}
+
+/* .team-photos {
+  animation-name: tempSlide;
+  animation-duration: 20000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  gap: 0px;
+} */
+
+@keyframes tempSlide {
+  22% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-100vw);
+  }
+
+  47% {
+    transform: translateX(-100vw);
+  }
+
+  50% {
+    transform: translateX(-200vw);
+  }
+
+  73% {
+    transform: translateX(-200vw);
+  }
+
+  75% {
+    transform: translateX(-300vw);
+  }
+
+  95% {
+    transform: translateX(-300vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.mobile-carousel {
+  width: 100%;
+  overflow-x: hidden;
+}
