@@ -58,15 +58,7 @@
     margin: 5px 0;
   }
 
-.team-photos {
-  display:grid;
-  animation-name: tempSlide;
-  animation-duration: 20000ms;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  gap: 0px;
-}
+
 
 /* .team-photos {
   animation-name: tempSlide;
@@ -114,4 +106,16 @@
 .mobile-carousel {
   width: 100%;
   overflow-x: hidden;
+}
+
+@media(max-width: 700px){
+  .team-photos {
+      display: grid;
+      animation-name: tempSlide;
+      animation-duration: 20000ms;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      gap: 0px;
+    }
 }
