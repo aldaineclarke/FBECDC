@@ -8,8 +8,12 @@ module.exports = {
     extend: {
       "width":{
         "contained": "1240px"
+      },
+      "colors":{
+        "darkPurple": "#340061"
       } 
     },
+
   },
   plugins: [],
 }
