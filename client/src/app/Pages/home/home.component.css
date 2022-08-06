@@ -36,8 +36,6 @@
   }
 
   .circle-photo img {
-    height: 250px;
-    width: 250px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;
@@ -118,4 +116,15 @@
       animation-iteration-count: infinite;
       gap: 0px;
     }
+
+  .circle-photo img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: filter 500ms linear;
+  }
 }
