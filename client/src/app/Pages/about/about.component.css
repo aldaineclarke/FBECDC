@@ -1,0 +1,12 @@
+
+@media(min-width: 700px){
+    .mainImg{
+        @apply float-right 
+    }
+    .mainImg img{
+        @apply w-[400px]
+    }
+    .board__member img{
+        @apply float-left w-[350px] pr-4
+    }
+}
