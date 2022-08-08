@@ -27,7 +27,7 @@
             <li class=" md:hidden inline-block ml-auto "><button (click)="toggleNav()" class="rounded-full flex items-center justify-center h-9 w-9 bg-purple-700 text-white hover:bg-purple-800"><i class="fa-solid fa-bars"></i></button></li>
         </ul>
 
-        <div class="overlay md:hidden" *ngIf="navActive"></div>
+        <div class="overlay md:hidden" *ngIf="navActive" (click)="toggleNav()"></div>
         <div [ngClass]="
         {
             'sidebar h-screen w-[250px] shadow-md gap-5 flex flex-col  absolute bg-white top-0 left-0 pt-4 transition-transform ease-in-out duration-500 md:hidden': true, 
