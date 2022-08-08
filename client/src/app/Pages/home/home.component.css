@@ -28,16 +28,13 @@
 }
 
   .team-photos {
-    margin-top: 5rem;
     display: grid;
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     gap: 20px;
   }
 
   .circle-photo img {
-    height: 250px;
-    width: 250px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;
@@ -118,4 +115,15 @@
       animation-iteration-count: infinite;
       gap: 0px;
     }
+
+  .circle-photo img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: filter 500ms linear;
+  }
 }

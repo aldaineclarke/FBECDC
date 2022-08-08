@@ -12,15 +12,15 @@
     <div class="wave-bg flex flex-col my-[100px] bg-purple-50">
         <div class="offers__body min-h-[400px]">
             <h2 class="text-2xl text-center text-purple-800 font-semibold">What can you expect from us?</h2>
-            <div class="flex flex-col gap-8">
-                <div class="offers flex flex-col gap-8 px-4">
-                    <div class="offers__grid flex gap-2 mt-10">
+            <div class="flex flex-col gap-8 md:flex-row mt-10 px-4">
+                <div class="offers flex flex-col gap-8">
+                    <div class="offers__grid flex gap-2">
                         <div class="offer__icon text-purple-800 ">
                             <i class="fa-solid fa-soccer-ball"></i>
                           </div>
                           <div class="offer__text">
                             <h3 class="text-purple-800 font-semibold text-lg">Inter School Sports Day</h3>
-                            <p class="mt-2">Students are given the opportunity to participate together in sporting events. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis!</p>
+                            <p class="">Students are given the opportunity to participate together in sporting events. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis!</p>
                           </div>
                     </div>
                     <div class="offer__grid flex gap-2 mt-4">
@@ -42,18 +42,18 @@
                         </div>
                       </div>
                 </div>
-                <div class="img px-4">
-                    <img src="/assets/Background.jpg" alt="background-image of school">
+                <div class="img  rounded-lg overflow-hidden">
+                    <img class="md:object-cover md:object-center md:w-full md:h-full md:px-0" src="/assets/Background.jpg" alt="background-image of school">
                 </div>
             </div>
         </div>
     </div>
-    <div class="programs">
+    <div class="programs py-10">
         <h2 class="text-2xl text-center text-purple-800 font-semibold">Our Programs</h2>
-        <div class="cards flex flex-col gap-10 px-4 items-center mt-8">
-            <div class="card rounded-xl border-gray-300 border w-2/3 shadow-md">
+        <div class="cards flex flex-col gap-10 px-4 items-center mt-8 md:flex-row md:items-stretch">
+            <div class="card rounded-xl border-gray-300 border w-2/3 shadow-md flex flex-col">
                 <img src="/assets/girlDoingOnlineClasses.jpg" alt="Image of a student doing online stuff" class="inline-block rounded-t-xl">
-                <div class="card__body p-4">
+                <div class="card__body p-4 flex-grow">
                     <p class="card__title text-md font-bold">Online Classes</p>
                     <p class="font-thin">These classes are aimed at students who are unable to attend classes physically. They have the opportunity to join class virtually.</p>
                 </div>
@@ -79,25 +79,25 @@
     <div class="our-team wave-bg my-[100px] bg-purple-50">
         <h2 class="text-2xl text-center text-purple-800 font-semibold">Meet our Team</h2>
         <div class="mobile-carousel">
-          <div class="team-photos">
-            <div class="circle-photo w-screen flex flex-col items-center">
-              <img src="/assets/teacher1.jpg" alt="This is an Image of one of the staff">
-              <h4>Alice Mooreland</h4>
+          <div class="team-photos mt-10">
+            <div class="circle-photo w-screen md:w-auto flex flex-col items-center ">
+              <img src="/assets/teacher1.jpg" alt="This is an Image of one of the staff" class="md:w-[20vw] h-[20vw]">
+              <h4  class="font-bold text-lg text-purple-800">Alice Mooreland</h4>
               <p>Teacher</p>
             </div>
-            <div class="circle-photo w-screen flex flex-col items-center">
-              <img src="/assets/teacher3.jpg" alt="This is an Image of one of the staff">
-              <h4>Tiffany Brisset</h4>
+            <div class="circle-photo w-screen md:w-auto flex flex-col items-center ">
+              <img src="/assets/teacher3.jpg" alt="This is an Image of one of the staff" class="md:w-[20vw] h-[20vw]">
+              <h4  class="font-bold text-lg text-purple-800">Tiffany Brisset</h4>
               <p>Teacher</p>
             </div>
-            <div class="circle-photo w-screen flex flex-col items-center">
-              <img src="/assets/teacher2.jpg" alt="This is an Image of one of the staff">
-              <h4>Peter Griffin</h4>
+            <div class="circle-photo w-screen md:w-auto flex flex-col items-center ">
+              <img src="/assets/teacher2.jpg" alt="This is an Image of one of the staff" class="md:w-[20vw] h-[20vw]">
+              <h4  class="font-bold text-lg text-purple-800">Peter Griffin</h4>
               <p>Teacher</p>
             </div>
-            <div class="circle-photo w-screen flex flex-col items-center">
-              <img src="/assets/portraitLadyRedDress.jpg" alt="This is an Image of one of the staff">
-              <h4>Dianna Pearson</h4>
+            <div class="circle-photo w-screen md:w-auto flex flex-col items-center ">
+              <img src="/assets/portraitLadyRedDress.jpg" alt="This is an Image of one of the staff" class="md:w-[20vw] h-[20vw]">
+              <h4 class="font-bold text-lg text-purple-800">Dianna Pearson</h4>
               <p>Teacher</p>
             </div>
           </div>
