@@ -1,19 +1,318 @@
-<section>
+<section class="p-4">
+    <h1 class="text-purple-800 font-bold text-3xl text-center my-4  md:text-4xl ">School Registration Form</h1>
+    <p>NB. Please fill out the form in its entirety and ensure that all the information is correct. Also remember to drop off all required documents on or before the date of registration</p>
 
-    <form [formGroup] = "registrationForm">
-        <div class="form-group">
+    <!-- Registration Form -->
+    <form [formGroup] = "registrationForm" class="mt-8 registrationForm">
+        
+        <!-- Child Information Fieldset -->
+        <fieldset>
+            <legend>Child Information</legend>
+                <div class="form-group grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="text" id="fname" aria-describedby="first name" class="peer" placeholder=" " />
+                            <label for="fname"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
+                                Name</label>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                    <div>
+                        <div class="relative z-0">
+                            <input type="text" id="lname" aria-describedby="Last name help" class="peer" placeholder=" "/>
+                
+                            <label for="lname"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                Last Name
+                            </label>
+                        </div>
+                        <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                            <span class="font-medium">Oh, snapp!</span>
+                            Some error message.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="text" id="mname" aria-describedby="middle name" class="peer" placeholder=" "/>
+                            <label for="mname"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Middle
+                                Name</label>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                    <div>
+                        <div class="relative z-0">
+                            <p class="text-sm text-purple-600">Gender</p>
+                            <div class="radios flex gap-8">
+                                <div class="radio-button flex items-center gap-2">
+                                    <input type="radio" id="male" aria-describedby="Male option for gender" class="peer" placeholder=" " name="gender"/>
+                                    <label for="male" class="text-sm">Male</label>
+                                </div>
+                                <div class="radio-button flex items-center gap-2">
+                                    <input type="radio" id="gender" aria-describedby="Female option for gender" class="peer" placeholder=" " name="gender" />
+                                    <label for="female" class="text-sm">Female</label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="date" id="DOB" aria-describedby="Date of Birth" class="peer" placeholder=" " />
+                    
+                            <label for="DOB"
+                                class="absolute text-sm dark:text-purple-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                Date of Birth.
+                            </label>
+                        </div>
+                        <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                            <span class="font-medium">Oh, snapp!</span>
+                            Some error message.
+                        </div>
+                    </div>
+                </div>
+        </fieldset>
+        <!-- Child Information Fieldset Ends -->
+
+        <!-- Parent Information Fieldset -->
+        <fieldset>
+            <legend>Parent/ Guardian Information</legend>
+                <div class="form-group">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="text" id="parent" aria-describedby="Parent Full name" class="peer" placeholder=" " />
+                            <label for="parent"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full Name</label>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="email" id="email" aria-describedby="email help" class="peer" placeholder=" " />
+                    
+                            <label for="email"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                Email
+                            </label>
+                        </div>
+                        <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                            <span class="font-medium">Oh, snapp!</span>
+                            Some error message.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="text" id="addressl1" aria-describedby="Address help" class="peer" placeholder=" " />
+                    
+                            <label for="addressl1"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                Address Line 1
+                            </label>
+                        </div>
+                        <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                            <span class="font-medium">Oh, snapp!</span>
+                            Some error message.
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative z-0">
+                        <input type="text" id="addressl2" aria-describedby="Second line of Address" class="peer" placeholder=" " />
+                
+                        <label for="addressl2"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Address Line 2
+                        </label>
+                    </div>
+                    <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                        <span class="font-medium">Oh, snapp!</span>
+                        Some error message.
+                    </div>
+                </div>
+                <div class="form-group grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="text" id="city" aria-describedby="City name" class="peer" placeholder=" "/>
+                            <label for="city"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">City</label>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                    <div>
+                        <div class="relative z-0">
+                            <select name="parish" id="parish">
+                                <option> -- Select Parish --</option>
+                                <option [value]="parish" *ngFor="let parish of parishes">{{parish}}</option>
+                            </select>
+                            <label for="parish" class="absolute text-sm dark:text-purple-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Parish</label>
+
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                </div>
+                <div class="form-group grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="relative z-0">
+                            <input type="tel" id="cell" aria-describedby="City name" class="peer" placeholder=" " />
+                            <label for="cell"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Cellphone (876-555-5555)</label>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                    <div>
+                        <div class="relative z-0">
+                            <input type="tel" id="home" aria-describedby="City name" class="peer" placeholder=" " />
+                            <label for="home"
+                                class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Home Phone</label>
+                        </div>
+                        <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                                class="font-medium">Oh,
+                                snapp!</span> Some error message.</p>
+                    </div>
+                </div>
+        </fieldset>
+        <!-- Parent Information Fieldset Ends -->
+
+        <!-- Health Information Fieldset  -->
+        <fieldset>
+            <legend>Health Information</legend>
+            <div class="form-group">
+                <div>
+                    <div class="relative z-0">
+                        <input type="text" id="parent" aria-describedby="Parent Full name" class="peer" placeholder=" " />
+                        <label for="parent"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Physician's
+                            Name</label>
+                    </div>
+                    <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                            class="font-medium">Oh,
+                            snapp!</span> Some error message.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <div class="relative z-0">
+                        <input type="email" id="email" aria-describedby="email help" class="peer" placeholder=" " />
+        
+                        <label for="email"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Email
+                        </label>
+                    </div>
+                    <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                        <span class="font-medium">Oh, snapp!</span>
+                        Some error message.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <div class="relative z-0">
+                        <input type="text" id="physicianAddress" aria-describedby="Address help" class="peer" placeholder=" " />
+        
+                        <label for="physicianAddress"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Physician's Address
+                        </label>
+                    </div>
+                    <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                        <span class="font-medium">Oh, snapp!</span>
+                        Some error message.
+                    </div>
+                </div>
+            </div>
             <div>
                 <div class="relative z-0">
-                    <input type="text" id="standard_error" aria-describedby="standard_error_help"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-red-600 appearance-none dark:text-white dark:border-red-500 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer"
-                        placeholder=" " />
-                    <label for="standard_error"
-                        class="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Standard
-                        error</label>
+                    <input type="text" id="addressl2" aria-describedby="Second line of Address" class="peer" placeholder=" " />
+        
+                    <label for="addressl2"
+                        class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Address Line 2
+                    </label>
                 </div>
-                <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400"><span class="font-medium">Oh,
-                        snapp!</span> Some error message.</p>
+                <div id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false">
+                    <span class="font-medium">Oh, snapp!</span>
+                    Some error message.
+                </div>
             </div>
-        </div>
+            <div class="form-group grid grid-cols-2 gap-8">
+                <div>
+                    <div class="relative z-0">
+                        <input type="text" id="city" aria-describedby="City name" class="peer" placeholder=" " />
+                        <label for="city"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">City</label>
+                    </div>
+                    <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                            class="font-medium">Oh,
+                            snapp!</span> Some error message.</p>
+                </div>
+                <div>
+                    <div class="relative z-0">
+                        <select name="parish" id="parish">
+                            <option> -- Select Parish --</option>
+                            <option [value]="parish" *ngFor="let parish of parishes">{{parish}}</option>
+                        </select>
+                        <label for="parish"
+                            class="absolute text-sm dark:text-purple-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Parish</label>
+        
+                    </div>
+                    <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                            class="font-medium">Oh,
+                            snapp!</span> Some error message.</p>
+                </div>
+            </div>
+            <div class="form-group grid grid-cols-2 gap-8">
+                <div>
+                    <div class="relative z-0">
+                        <input type="tel" id="cell" aria-describedby="City name" class="peer" placeholder=" " />
+                        <label for="cell"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Cellphone
+                            (876-555-5555)</label>
+                    </div>
+                    <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                            class="font-medium">Oh,
+                            snapp!</span> Some error message.</p>
+                </div>
+                <div>
+                    <div class="relative z-0">
+                        <input type="tel" id="home" aria-describedby="City name" class="peer" placeholder=" " />
+                        <label for="home"
+                            class="absolute text-sm dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Home
+                            Phone</label>
+                    </div>
+                    <p id="standard_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400" *ngIf="false"><span
+                            class="font-medium">Oh,
+                            snapp!</span> Some error message.</p>
+                </div>
+            </div>
+        </fieldset>
+        <!-- Health Information Fieldset Ends -->
     </form>
+    <!-- Registration Form Ends -->
+
 </section>
