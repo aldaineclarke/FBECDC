@@ -9,7 +9,9 @@ import { FormGroup } from '@angular/forms';
 export class RegistrationFormComponent implements OnInit {
 
   constructor() { }
-  parishes = ["Hanover", "St. James", "Trelawny", "St. Ann", "St. Mary", "Portland", "Westmoreland", "St. Elizabeth", "Manchester", "Clarendon", "St. Catherine", "Kingston", "St. Andrew", "St. Thomas"]
+  parishes = ["Hanover", "St. James", "Trelawny", "St. Ann", "St. Mary", "Portland", "Westmoreland", "St. Elizabeth", "Manchester", "Clarendon", "St. Catherine", "Kingston", "St. Andrew", "St. Thomas"];
+
+  hasAgreed =false;
 
   registrationForm = new FormGroup({
     

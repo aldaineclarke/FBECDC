@@ -1,16 +1,22 @@
 .registrationForm legend{
-    @apply text-lg font-semibold text-purple-800 my-2;
+    @apply text-xl  font-semibold text-gray-700 my-2;
 }
 
 .registrationForm label{
-    @apply text-purple-600;
+    @apply text-gray-700 font-normal;
 }
-.registrationForm input:not([type="radio"]), .registrationForm select{
-    @apply block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-purple-600 appearance-none focus:outline-none focus:ring-0 focus:border-purple-800;
+.registrationForm input[type="text"], input[type="date"], input[type="tel"],input[type="email"], .registrationForm select{
+    @apply block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-gray-100 appearance-none focus:outline-none focus:ring-0 focus:border-purple-300;
 }
 .registrationForm fieldset{
     @apply mt-8
 }
 .registrationForm fieldset > div{
     @apply mt-4
+}
+
+
+input:checked{
+    background-color: purple;
+    color: red;
 }

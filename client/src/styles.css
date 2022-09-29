@@ -12,3 +12,28 @@
     max-width: 1240px;
     margin: auto;
 }
+
+.btn{
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgba(211, 211, 211, 0.223);
+    border-radius: 20px;
+    border: none;
+}
+
+.btn:disabled,.btn:disabled:hover{
+    color:rgba(211, 211, 211, .6);
+    background-color: rgba(211, 211, 211, 0.223);
+}
+
+.btn--primary{
+    color: white;
+    transition: 300ms background-color ease-in;
+    @apply bg-purple-600 hover:bg-purple-800
+}
+
+.btn--primary:hover{
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

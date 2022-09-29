@@ -1,6 +1,7 @@
 <section class="p-4 contained-1440">
-    <h1 class="text-purple-800 font-bold text-3xl text-center my-4  md:text-4xl ">School Registration Form</h1>
-    <p>NB. Please fill out the form in its entirety and ensure that all the information is correct. Also remember to drop off all required documents on or before the date of registration</p>
+    <h1 class="text-purple-800 font-bold text-3xl text-center my-6 md:text-4xl ">School Registration Form</h1>
+    <p class="font-thin text-grey-300 text-xl">NB. Please fill out the form in its entirety and ensure that all the information is correct. Also remember to drop off all required documents on or before the date of registration</p>
+    <div class="mt-4 flex justify-end"><button class="btn text-purple-500">Print Form</button></div>
 
     <!-- Registration Form -->
     <form [formGroup] = "registrationForm" class="mt-8 registrationForm">
@@ -49,14 +50,14 @@
                     </div>
                     <div>
                         <div class="relative z-0">
-                            <p class="text-sm text-purple-600">Gender</p>
+                            <p class="text-sm text-grey-500">Gender</p>
                             <div class="radios flex gap-8">
                                 <div class="radio-button flex items-center gap-2">
                                     <input type="radio" id="male" aria-describedby="Male option for gender" class="peer" placeholder=" " name="gender"/>
                                     <label for="male" class="text-sm">Male</label>
                                 </div>
                                 <div class="radio-button flex items-center gap-2">
-                                    <input type="radio" id="gender" aria-describedby="Female option for gender" class="peer" placeholder=" " name="gender" />
+                                    <input type="radio" id="female" aria-describedby="Female option for gender" class="peer" placeholder=" " name="gender" />
                                     <label for="female" class="text-sm">Female</label>
                                 </div>
 
@@ -311,6 +312,14 @@
                 </div>
             </div>
         </fieldset>
+        <br>
+        <label class="flex gap-2 items-baseline">
+            <input type="checkbox" name="has;Agreed" [(ngModel)]="hasAgreed"[ngModelOptions]="{standalone: true}">
+            <span class="font-semibold">I agree that all the information above is correct to the best of my ability.</span>
+        </label>
+        <div class="submit-btn mt-6 flex justify-end">
+            <button class="btn btn--primary " type="submit" [disabled]="!hasAgreed">Submit Form</button>
+        </div>
         <!-- Health Information Fieldset Ends -->
     </form>
     <!-- Registration Form Ends -->
