@@ -13,6 +13,7 @@
 .wave-bg{
   position:relative;
 }
+
 .wave-bg::after{
       position: absolute;
       content: "";

@@ -7,3 +7,8 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.contained-1440{
+    max-width: 1240px;
+    margin: auto;
+}
