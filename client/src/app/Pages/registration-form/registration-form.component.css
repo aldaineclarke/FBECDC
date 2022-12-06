@@ -1,0 +1,16 @@
+.registrationForm legend{
+    @apply text-lg font-semibold text-purple-800 my-2;
+}
+
+.registrationForm label{
+    @apply text-purple-600;
+}
+.registrationForm input:not([type="radio"]), .registrationForm select{
+    @apply block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-purple-600 appearance-none focus:outline-none focus:ring-0 focus:border-purple-800;
+}
+.registrationForm fieldset{
+    @apply mt-8
+}
+.registrationForm fieldset > div{
+    @apply mt-4
+}
