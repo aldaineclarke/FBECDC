@@ -22,8 +22,8 @@
 }
 
 .btn:disabled,.btn:disabled:hover{
-    color:rgba(211, 211, 211, .6);
-    background-color: rgba(211, 211, 211, 0.223);
+    color:rgb(189, 189, 189);
+    background-color: rgba(211, 211, 211, 0.3);
 }
 
 .btn--primary{
