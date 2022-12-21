@@ -6,7 +6,7 @@
 .nav__item{
     @apply text-gray-400 mx-2 transition duration-300
 }
-.nav__item:hover{
+.nav__item:hover, .nav__link.active, .active{
     @apply text-purple-700
 }
 .nav__item.logo{

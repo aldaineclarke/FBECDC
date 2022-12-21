@@ -12,6 +12,8 @@ import { RegistrationFormComponent } from './Pages/registration-form/registratio
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { CalendarPageComponent } from './Pages/calendar-page/calendar-page.component';
+import { GalleryComponent } from './Pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ContactComponent } from './Pages/contact/contact.component';
     FooterComponent,
     AboutComponent,
     RegistrationFormComponent,
-    ContactComponent
+    ContactComponent,
+    CalendarPageComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
