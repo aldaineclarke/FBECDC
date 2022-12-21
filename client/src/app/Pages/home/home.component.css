@@ -27,6 +27,16 @@
       z-index: -1;
     
 }
+h2{
+  @apply text-2xl text-center text-purple-800;
+
+}
+.offer__text h3{
+  @apply text-xl;
+}
+.offer__text p{
+  @apply font-thin text-lg text-gray-800;
+}
 
   .team-photos {
     display: grid;
@@ -127,4 +137,12 @@
     cursor: pointer;
     transition: filter 500ms linear;
   }
+
+
+}
+@media(min-width: 360px ) and (max-width: 720px){
+  .hero-section img {
+      height: 50vh;
+      object-fit: cover;
+    }
 }

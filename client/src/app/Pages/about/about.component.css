@@ -10,3 +10,10 @@
         @apply float-left w-[350px] pr-4
     }
 }
+
+h1{
+    @apply text-center text-2xl font-bold text-purple-800 pb-5;
+}
+p{
+    @apply font-thin text-lg
+}
