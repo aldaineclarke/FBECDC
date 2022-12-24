@@ -20,3 +20,15 @@ input:checked{
     background-color: purple;
     color: red;
 }
+.stepper-buttons{
+    @apply mt-4;
+}
+.form-group > div {
+    width: auto;
+}
+.form-group  mat-form-field{
+    display:block;
+}
+.mat-form-field-infix{
+    width: 100%;
+}

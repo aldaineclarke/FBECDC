@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { CalendarPageComponent } from './Pages/calendar-page/calendar-page.component';
 import { GalleryComponent } from './Pages/gallery/gallery.component';
+import { FbecdcMaterialDesignModule } from './fbecdc-material-design/fbecdc-material-design.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { GalleryComponent } from './Pages/gallery/gallery.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FbecdcMaterialDesignModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

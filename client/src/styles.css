@@ -12,7 +12,11 @@
     max-width: 1240px;
     margin: auto;
 }
-
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit{
+    @apply bg-purple-600
+}
 .btn{
     display: inline-block;
     padding: 8px 15px;
@@ -21,19 +25,37 @@
     border: none;
 }
 
-.btn:disabled,.btn:disabled:hover{
+/* .btn:disabled,.btn:disabled:hover{
     color:rgb(189, 189, 189);
     background-color: rgba(211, 211, 211, 0.3);
-}
+} */
 
 .btn--primary{
+
     color: white;
-    transition: 300ms background-color ease-in;
-    @apply bg-purple-600 hover:bg-purple-800
+    @apply bg-purple-600
 }
 
-.btn--primary:hover{
-
-}
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+/* .mat-form-field-flex> .mat-form-field-infix{
+    padding:0.4em 0 !important;
+}
+
+.mat-form-field-wrapper {
+    top: -1.5em;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+} */
+
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color:white;
+}
+
+.mat-form-field{
+    font-size: 12px;
+}
