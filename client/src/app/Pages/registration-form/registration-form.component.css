@@ -6,16 +6,14 @@
     @apply text-gray-700 font-normal;
 }
 .registrationForm input[type="text"], input[type="date"], input[type="tel"],input[type="email"], .registrationForm select{
-    @apply block py-2.5 px-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-gray-100 appearance-none focus:outline-none focus:ring-0 focus:border-purple-300;
+    @apply block  w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-gray-100 appearance-none focus:outline-none focus:ring-0 focus:border-purple-300;
 }
 .registrationForm fieldset{
     @apply mt-8
 }
-.registrationForm fieldset > div{
-    @apply mt-4
+.registrationForm .gender-group p{
+    margin-bottom:0;
 }
-
-
 input:checked{
     background-color: purple;
     color: red;
